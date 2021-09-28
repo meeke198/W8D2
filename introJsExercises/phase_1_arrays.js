@@ -16,3 +16,19 @@ Array.prototype.uniq = function() {
 
 console.log([1,2,2,2,3].uniq())
 
+Array.prototype.twoSum = function() {
+    let newArr = [];
+
+    for (let i = 0; i < this.length; i++) {
+        for (let j = i + 1; j < this.length; j++) {
+            let curEle = this[i];
+            let nextEle = this[j];
+            if (curEle + nextEle === 0) {
+                newArr.push([i, j]);
+            }
+        }
+    }
+    return newArr;
+}
+
+console.log([1, 3, 4, -5, 9, -4, 10, 5].twoSum())
