@@ -21,4 +21,14 @@ function test(num) {
 
 console.log([1,2,3].myMap(test));
 
+Array.prototype.myReduce = function (callback,[initialValue]) {
+    if(initialValue)
+    let sum = 0;
+    this.myEach(el => sum += callback(ele));
+    return sum;
+}
+function test(acc, el) {
+    acc + el
+}
 
+console.log([1, 2, 3].myReduce(test, 9))
