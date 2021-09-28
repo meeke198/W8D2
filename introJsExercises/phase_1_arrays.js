@@ -47,3 +47,4 @@ Array.prototype.transpose = function () {
 }
 
 console.log([[1, 3, 4], [7, 8, 9]].transpose())
+
